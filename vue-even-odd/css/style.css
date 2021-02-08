@@ -1,0 +1,66 @@
+/* | GENERAL | */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  display: inline-block;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #7284a8;
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+}
+
+.numbers {
+  margin: 30px 0;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.numbers li {
+  display: inline;
+  padding: 10px;
+}
+
+.green {
+  color: #244f26;
+}
+
+.red {
+  color: #b33951;
+}
+
+.buttons {
+  display: flex;
+}
+
+.btn {
+  font-size: 0.5em;
+  background: #004225;
+  padding: 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.deactivate {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

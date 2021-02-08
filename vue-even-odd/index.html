@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <!-- Favicon -->
+
+    <!-- Link FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Link Google Font -->
+
+    <!-- Link Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <!-- Link AXIOS/AJAX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <!-- Link foglio di stile personale -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- MAIN -->
+    <main>
+        <section id="app">
+
+            <!-- Sezione numeri pari -->
+            <p class="green" v-if="numList.length > 0">Numeri Pari</p>
+            <div class="numbers">
+                <ul>
+                    <li class="green" v-for="num in numList" v-if="num % 2 == 0">{{num}}</li>
+                </ul>
+            </div>
+
+            <!-- Sezione numeri dispari -->
+            <p class="red" v-if="numList.length > 0">Numeri Dispari</p>
+            <div class="numbers">
+                <ul>
+                    <li class="red" v-for="num in numList" v-if="num % 2 != 0">{{num}}</li>
+                </ul>
+            </div>
+
+            <!-- Pulsanti di controllo numeri -->
+            <div class="buttons">
+                <div @click="genArr" v-if="sentinel" class="btn">Genera array</div>
+                <div @click="cleanArr" v-else class="btn">Pulisci array</div>
+                <div @click="genNum" :class="(sentinel)?'deactivate':''" class="btn">Genera numero</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Link Script Javascript -->
+    <script src="js/script.js" charset="utf-8"></script>
+</body>
+</html>
